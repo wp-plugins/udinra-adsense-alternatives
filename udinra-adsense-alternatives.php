@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Udinra-Adsense-Alternatives
-Plugin URI: http://udinra.com/store/wordpress-plugins
-Description: Simple plugin for in image advertising networks (Luminate,GumGum etc),In text advertising network (Infolinks,Kontera) and Dynamic Oxygen advertising network.
-Version: 1.0
+Plugin URI: http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
+Description: Simple plugin for in image advertising networks,In text advertising network and Dynamic Oxygen advertising network.
+Version: 1.1
 Author: Udinra
-Author URI: http://udinra.com/
+Author URI: http://udinra.com
 */
 
 function UdinraAA_OPT() {
@@ -21,28 +21,44 @@ $_POST['udinra_ads_alt_intext'] = "";
 if(!isset($_POST['udinra_ads_alt_dynamic'])){
 $_POST['udinra_ads_alt_dynamic'] = "";
 }
+if(!isset($_POST['udinra_inimage_admin_flag'])){
+$_POST['udinra_inimage_admin_flag'] = "";
+}
+if(!isset($_POST['udinra_intext_admin_flag'])){
+$_POST['udinra_intext_admin_flag'] = "";
+}
+if(!isset($_POST['udinra_dyn_admin_flag'])){
+$_POST['udinra_dyn_admin_flag'] = "";
+}
+
 if($_POST['udinra_ads_alt_update']){
 update_option('udinra_ads_alt_inimage',$_POST['udinra_ads_alt_inimage']);
 update_option('udinra_ads_alt_intext',$_POST['udinra_ads_alt_intext']);
 update_option('udinra_ads_alt_dynamic',$_POST['udinra_ads_alt_dynamic']);
+update_option('udinra_inimage_admin_flag',$_POST['udinra_inimage_admin_flag']);
+update_option('udinra_intext_admin_flag',$_POST['udinra_intext_admin_flag']);
+update_option('udinra_dyn_admin_flag',$_POST['udinra_dyn_admin_flag']);
+
 }
-$wp_udinra_ads_alt_inimage = get_option('udinra_ads_alt_inimage');
-$wp_udinra_ads_alt_intext  = get_option('udinra_ads_alt_intext');
-$wp_udinra_ads_alt_dynamic = get_option('udinra_ads_alt_dynamic');
+$wp_udinra_ads_alt_inimage    = get_option('udinra_ads_alt_inimage');
+$wp_udinra_ads_alt_intext     = get_option('udinra_ads_alt_intext');
+$wp_udinra_ads_alt_dynamic    = get_option('udinra_ads_alt_dynamic');
+$wp_udinra_intext_admin_flag  = get_option('udinra_intext_admin_flag');
+$wp_udinra_inimage_admin_flag = get_option('udinra_inimage_admin_flag');
+$wp_udinra_dyn_admin_flag     = get_option('udinra_dyn_admin_flag');
 ?>
 <div class="wrap">
 <h2>Udinra Adsense Alternatives (Configuration)</h2>
 <form method="post" id="UdinraAA_OPT">
 <fieldset class="options">
-<p>Paste code from <b>In Image advertising networks</b> (like <a href="http://gumgum.com">GumGum</a>,<a href="http://luminate.com">Luminate</a>) in below box.</p>
-<p><input type="textbox" id="udinra_ads_alt_inimage" name="udinra_ads_alt_inimage" /></p>
-<p>Paste code from <b>In Text advertising networks</b> (like <a href="http://infolinks.com">Infolinks</a>,<a href="http://kontera.com">Kontera</a>) in below box.</p>
-<p><input type="textbox" id="udinra_ads_alt_intext" name="udinra_ads_alt_intext"  /></p>
-<p>Paste code from <a href="https://pub.dynamicoxygen.com/signup.jsp?ref=6117">Dynamic Oxygen</a> in below box.If you are not aware of this advertising network <a href="http://udinra.com/blog/should-i-use-dynamic-oxygen-ads">check this</a></p>
-<p><input type="textbox" id="udinra_ads_alt_dynamic" name="udinra_ads_alt_dynamic"  /></p>
-
-<p><em>If you have a minute, please <a href="http://wordpress.org/extend/plugins/udinra-adsense-alternatives/" target="_blank">rate this plugin</a> on WordPress.org... thanks!</em></p>
-<p><input type="submit" name="udinra_ads_alt_update" value="Update" /></p>
+<table><tr><td>Paste code from <b><a href="http://udinra.com/blog/list-of-in-image-advertising-networks" title="Know more about In Image Advertising networks">In Image advertising networks</a></b></td>
+<td><textarea rows="3" columns="300" id="udinra_ads_alt_inimage" name="udinra_ads_alt_inimage" ><?php echo stripslashes($wp_udinra_ads_alt_inimage); ?></textarea></td><td><input type="checkbox" id="udinra_inimage_admin_flag" name="udinra_inimage_admin_flag" value="udinra_inimage_admin_flag" <?php if($wp_udinra_inimage_admin_flag == true) { echo('checked="checked"'); } ?> />Disable Logged in Users</td></tr>
+<tr><td>Paste code from <b><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="Know more about In Text Advertising networks">In Text advertising networks</b></a></td>
+<td><textarea id="udinra_ads_alt_intext" name="udinra_ads_alt_intext" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_intext); ?></textarea></td><td><input type="checkbox" id="udinra_intext_admin_flag" name="udinra_intext_admin_flag" value="udinra_intext_admin_flag" <?php if($wp_udinra_intext_admin_flag == true) { echo('checked="checked"'); } ?> />Disable Logged in Users</td></tr>
+<tr><td>Paste code from <a href="https://pub.dynamicoxygen.com/signup.jsp?ref=6117" title="Signup for Dynamic Oxygen">Dynamic Oxygen</a></td>
+<td><textarea id="udinra_ads_alt_dynamic" name="udinra_ads_alt_dynamic" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_dynamic); ?></textarea></td><td><input type="checkbox" id="udinra_dyn_admin_flag" name="udinra_dyn_admin_flag" value="udinra_dyn_admin_flag" <?php if($wp_udinra_dyn_admin_flag == true) { echo('checked="checked"'); } ?> />Disable Logged in Users</td></tr>
+<tr><td><em>If you have a minute, please <a href="http://wordpress.org/extend/plugins/udinra-adsense-alternatives/" target="_blank">rate this plugin</a> on WordPress.org... thanks!</em></td></tr>
+<tr><td><input type="submit" name="udinra_ads_alt_update" value="Update" /></td></tr></table>
 </fieldset>
 </form>
 <br>
@@ -70,11 +86,35 @@ function udinra_ads_alt_footer() {
 $wp_udinra_ads_alt_inimage = get_option('udinra_ads_alt_inimage');
 $wp_udinra_ads_alt_intext  = get_option('udinra_ads_alt_intext');
 $wp_udinra_ads_alt_dynamic = get_option('udinra_ads_alt_dynamic');
-
-echo stripslashes($wp_udinra_ads_alt_inimage);
-echo stripslashes($wp_udinra_ads_alt_intext);
-echo stripslashes($wp_udinra_ads_alt_indynamic);
-
+$wp_udinra_intext_admin_flag  = get_option('udinra_intext_admin_flag');
+$wp_udinra_inimage_admin_flag = get_option('udinra_inimage_admin_flag');
+$wp_udinra_dyn_admin_flag     = get_option('udinra_dyn_admin_flag');
+$udinra_start_tag = "<?php if ( is_user_logged_in() ) { }else { ?>";
+$udinra_end_tag   = "<?php } ?>";
+if($wp_udinra_intext_admin_flag == true) {
+	if ( is_user_logged_in() ) { }
+	else {	
+		echo stripslashes($wp_udinra_ads_alt_intext);
+	}}
+else {
+	echo stripslashes($wp_udinra_ads_alt_intext);
+}
+if($wp_udinra_inimage_admin_flag == true) {
+	if ( is_user_logged_in() ) { }
+	else {	
+		echo stripslashes($wp_udinra_ads_alt_inimage);
+	}}
+else {
+	echo stripslashes($wp_udinra_ads_alt_inimage);
+}
+if($wp_udinra_dyn_admin_flag == true) {
+	if ( is_user_logged_in() ) { }
+	else {	
+		echo stripslashes($wp_udinra_ads_alt_dynamic);
+	}}
+else {
+	echo stripslashes($wp_udinra_ads_alt_dynamic);
+}
 }
 
 function udinra_ads_alt_admin() {
