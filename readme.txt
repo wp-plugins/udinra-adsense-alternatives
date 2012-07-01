@@ -1,27 +1,50 @@
 === Udinra Adsense Alternatives ===
 Contributors: Udinra
 Donate link: http://udinra.com/
-Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,gumgum,kontera,infolinks,luminate,dynamic oxygen
+Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,gumgum,kontera,infolinks,luminate,dynamic oxygen,mobile advertising networks,inmobi,admob,adbull
 Requires at least: 2
-Tested up to: 3.3.1
-Stable tag: 1.1
+Tested up to: 3.4.1
+Stable tag: 1.3
+License:GPLv2 or later
 
-Simple plugin for in image advertising networks ,In text advertising network and Dynamic Oxygen advertising network 
+Plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and other javascript advertising network.
 
 == Description ==
 
-Udinra Adsense Alternatives is a plugin for WordPress websites that allows webmasters to use In Image advertising networks <a href="http://udinra.com/blog/list-of-in-image-advertising-networks">to know more about In Image Advertising networks read this</a>, In Text advertising networks <a href="http://udinra.com/blog/list-of-in-text-advertising-networks">to know more about In Text Advertising networks read this</a> and Dynamic Oxygen <a href="http://udinra.com/blog/should-i-use-dynamic-oxygen-ads">to know more about Dynamic Oxygen  read this</a>.
+Udinra Adsense Alternatives is a plugin for WordPress websites that allows webmasters to use 
 
-= New Feature =
+<ul>
+<li><a href="http://udinra.com/blog/list-of-in-image-advertising-networks" title="List of In Image Advertising networks">In Image Advertising networks</a></li>
+<li><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="List of In Text Advertising networks">In Text Advertising networks</a></li>
+<li><a href="http://udinra.com/blog/mobile-advertising-network-list" title="List of Mobile Advertising networks">Mobile Advertising networks</a></li>
+<li><a href="http://udinra.com/blog/should-i-use-dynamic-oxygen-ads" title="Know about Dynamic Oxygen">Dynamic Oxygen</a></li>
+<li><a href="http://udinra.com/blog/is-adbull-scam" title="Know about Adbull">Adbull</a></li>
+<li>Many other advertising networks with Javascript based ad codes</li>
+</ul>
+
+= New Feature 1.3=
+
+* Support for two advertising networks of each type with rotation.
+* Enable or disable ad networks on different pages.
+
+= New Feature 1.2=
+
+* Support for Mobile Advertising networks.
+* Enable or disable other ad networks if website is accessed by mobile devices and no mobile advertising network present
+
+= New Feature 1.1=
+
 * Enable or disable ads for logged in users
 
 = Features =
 * Simple Copy and Paste required
-* Can you all three types of advertising network on same website together
+* Can you all four types of advertising network on same website together
 * Simple and fast plugin
 * All features configurable via WordPress admin
 
 For details visit http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
+
+For support forum of this version visit http://udinra.com/blog/udinra-adsense-alternatives-version-1-3-forum
 
 == Installation ==
 
@@ -37,6 +60,16 @@ http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
 
 == Changelog ==
+
+= 1.3 =
+
+Two advertising network of each type
+Random rotation of advertising networks
+Disable ads on different page types
+
+= 1.2 =
+
+Mobile Advertising networks
 
 = 1.1 =
 
