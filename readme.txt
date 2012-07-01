@@ -1,13 +1,13 @@
 === Udinra Adsense Alternatives ===
 Contributors: Udinra
 Donate link: http://udinra.com/
-Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,gumgum,kontera,infolinks,luminate,dynamic oxygen,mobile advertising networks,inmobi,admob
+Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,gumgum,kontera,infolinks,luminate,dynamic oxygen,mobile advertising networks,inmobi,admob,adbull
 Requires at least: 2
-Tested up to: 3.3.2
-Stable tag: 1.2
+Tested up to: 3.4.1
+Stable tag: 1.3
 License:GPLv2 or later
 
-Simple plugin for in image advertising networks ,In text advertising network,Mobile Advertising networks and Dynamic Oxygen advertising network.
+Plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and other javascript advertising network.
 
 == Description ==
 
@@ -18,7 +18,14 @@ Udinra Adsense Alternatives is a plugin for WordPress websites that allows webma
 <li><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="List of In Text Advertising networks">In Text Advertising networks</a></li>
 <li><a href="http://udinra.com/blog/mobile-advertising-network-list" title="List of Mobile Advertising networks">Mobile Advertising networks</a></li>
 <li><a href="http://udinra.com/blog/should-i-use-dynamic-oxygen-ads" title="Know about Dynamic Oxygen">Dynamic Oxygen</a></li>
+<li><a href="http://udinra.com/blog/is-adbull-scam" title="Know about Adbull">Adbull</a></li>
+<li>Many other advertising networks with Javascript based ad codes</li>
 </ul>
+
+= New Feature 1.3=
+
+* Support for two advertising networks of each type with rotation.
+* Enable or disable ad networks on different pages.
 
 = New Feature 1.2=
 
@@ -37,6 +44,8 @@ Udinra Adsense Alternatives is a plugin for WordPress websites that allows webma
 
 For details visit http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
+For support forum of this version visit http://udinra.com/blog/udinra-adsense-alternatives-version-1-3-forum
+
 == Installation ==
 
 http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
@@ -51,6 +60,12 @@ http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
 
 == Changelog ==
+
+= 1.3 =
+
+Two advertising network of each type
+Random rotation of advertising networks
+Disable ads on different page types
 
 = 1.2 =
 

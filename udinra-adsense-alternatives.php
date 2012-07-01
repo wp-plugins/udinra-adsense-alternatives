@@ -2,28 +2,43 @@
 /*
 Plugin Name: Udinra-Adsense-Alternatives
 Plugin URI: http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
-Description: Simple plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and Dynamic Oxygen advertising network.
-Version: 1.2
+Description: Simple plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and Dynamic Oxygen,Adbull advertising network.
+Version: 1.3
 Author: Udinra
 Author URI: http://udinra.com
 */
 
 function UdinraAA_OPT() {
+
+/*-------------------------- Ad code section start--------------------- */
 if(!isset($_POST['udinra_ads_alt_update'])){
 $_POST['udinra_ads_alt_update'] = "";
 }
-if(!isset($_POST['udinra_ads_alt_inimage'])){
-$_POST['udinra_ads_alt_inimage'] = "";
+if(!isset($_POST['udinra_ads_alt_inimage1'])){
+$_POST['udinra_ads_alt_inimage1'] = "";
 }
-if(!isset($_POST['udinra_ads_alt_intext'])){
-$_POST['udinra_ads_alt_intext'] = "";
+if(!isset($_POST['udinra_ads_alt_intext1'])){
+$_POST['udinra_ads_alt_intext1'] = "";
 }
-if(!isset($_POST['udinra_ads_alt_mobile'])){
-$_POST['udinra_ads_alt_mobile'] = "";
+if(!isset($_POST['udinra_ads_alt_mobile1'])){
+$_POST['udinra_ads_alt_mobile1'] = "";
 }
-if(!isset($_POST['udinra_ads_alt_dynamic'])){
-$_POST['udinra_ads_alt_dynamic'] = "";
+if(!isset($_POST['udinra_ads_alt_dynamic1'])){
+$_POST['udinra_ads_alt_dynamic1'] = "";
 }
+if(!isset($_POST['udinra_ads_alt_inimage2'])){
+$_POST['udinra_ads_alt_inimage2'] = "";
+}
+if(!isset($_POST['udinra_ads_alt_intext2'])){
+$_POST['udinra_ads_alt_intext2'] = "";
+}
+if(!isset($_POST['udinra_ads_alt_mobile2'])){
+$_POST['udinra_ads_alt_mobile2'] = "";
+}
+if(!isset($_POST['udinra_ads_alt_dynamic2'])){
+$_POST['udinra_ads_alt_dynamic2'] = "";
+}
+/*-------------------------- start admin flag--------------------- */
 if(!isset($_POST['udinra_inimage_admin_flag'])){
 $_POST['udinra_inimage_admin_flag'] = "";
 }
@@ -36,60 +51,272 @@ $_POST['udinra_dyn_admin_flag'] = "";
 if(!isset($_POST['udinra_mobile_admin_flag'])){
 $_POST['udinra_mobile_admin_flag'] = "";
 }
+/*-------------------------- start home flag--------------------- */
+if(!isset($_POST['udinra_inimage_home_flag'])){
+$_POST['udinra_inimage_home_flag'] = "";
+}
+if(!isset($_POST['udinra_intext_home_flag'])){
+$_POST['udinra_intext_home_flag'] = "";
+}
+if(!isset($_POST['udinra_dyn_home_flag'])){
+$_POST['udinra_dyn_home_flag'] = "";
+}
+if(!isset($_POST['udinra_mobile_home_flag'])){
+$_POST['udinra_mobile_home_flag'] = "";
+}
+/*-------------------------- start page flag--------------------- */
+if(!isset($_POST['udinra_inimage_page_flag'])){
+$_POST['udinra_inimage_page_flag'] = "";
+}
+if(!isset($_POST['udinra_intext_page_flag'])){
+$_POST['udinra_intext_page_flag'] = "";
+}
+if(!isset($_POST['udinra_dyn_page_flag'])){
+$_POST['udinra_dyn_page_flag'] = "";
+}
+if(!isset($_POST['udinra_mobile_page_flag'])){
+$_POST['udinra_mobile_page_flag'] = "";
+}
+/*-------------------------- start 404 flag--------------------- */
+if(!isset($_POST['udinra_inimage_404_flag'])){
+$_POST['udinra_inimage_404_flag'] = "";
+}
+if(!isset($_POST['udinra_intext_404_flag'])){
+$_POST['udinra_intext_404_flag'] = "";
+}
+if(!isset($_POST['udinra_dyn_404_flag'])){
+$_POST['udinra_dyn_404_flag'] = "";
+}
+if(!isset($_POST['udinra_mobile_404_flag'])){
+$_POST['udinra_mobile_404_flag'] = "";
+}
 
+/*-------------------------- start archive flag--------------------- */
+if(!isset($_POST['udinra_inimage_arc_flag'])){
+$_POST['udinra_inimage_arc_flag'] = "";
+}
+if(!isset($_POST['udinra_intext_arc_flag'])){
+$_POST['udinra_intext_arc_flag'] = "";
+}
+if(!isset($_POST['udinra_dyn_arc_flag'])){
+$_POST['udinra_dyn_arc_flag'] = "";
+}
+if(!isset($_POST['udinra_mobile_arc_flag'])){
+$_POST['udinra_mobile_arc_flag'] = "";
+}
+/*-------------------------- start search flag--------------------- */
+if(!isset($_POST['udinra_inimage_srch_flag'])){
+$_POST['udinra_inimage_srch_flag'] = "";
+}
+if(!isset($_POST['udinra_intext_srch_flag'])){
+$_POST['udinra_intext_srch_flag'] = "";
+}
+if(!isset($_POST['udinra_dyn_srch_flag'])){
+$_POST['udinra_dyn_srch_flag'] = "";
+}
+if(!isset($_POST['udinra_mobile_srch_flag'])){
+$_POST['udinra_mobile_srch_flag'] = "";
+}
+/*-------------------------- start author flag--------------------- */
+if(!isset($_POST['udinra_inimage_auth_flag'])){
+$_POST['udinra_inimage_auth_flag'] = "";
+}
+if(!isset($_POST['udinra_intext_auth_flag'])){
+$_POST['udinra_intext_auth_flag'] = "";
+}
+if(!isset($_POST['udinra_dyn_auth_flag'])){
+$_POST['udinra_dyn_auth_flag'] = "";
+}
+if(!isset($_POST['udinra_mobile_auth_flag'])){
+$_POST['udinra_mobile_auth_flag'] = "";
+}
+/*-------------------------- start checking--------------------- */
 if($_POST['udinra_ads_alt_update']){
-update_option('udinra_ads_alt_inimage',$_POST['udinra_ads_alt_inimage']);
-update_option('udinra_ads_alt_intext',$_POST['udinra_ads_alt_intext']);
-update_option('udinra_ads_alt_dynamic',$_POST['udinra_ads_alt_dynamic']);
-update_option('udinra_ads_alt_mobile',$_POST['udinra_ads_alt_mobile']);
+update_option('udinra_ads_alt_inimage1',$_POST['udinra_ads_alt_inimage1']);
+update_option('udinra_ads_alt_intext1',$_POST['udinra_ads_alt_intext1']);
+update_option('udinra_ads_alt_dynamic1',$_POST['udinra_ads_alt_dynamic1']);
+update_option('udinra_ads_alt_mobile1',$_POST['udinra_ads_alt_mobile1']);
+update_option('udinra_ads_alt_inimage2',$_POST['udinra_ads_alt_inimage2']);
+update_option('udinra_ads_alt_intext2',$_POST['udinra_ads_alt_intext2']);
+update_option('udinra_ads_alt_dynamic2',$_POST['udinra_ads_alt_dynamic2']);
+update_option('udinra_ads_alt_mobile2',$_POST['udinra_ads_alt_mobile2']);
+
 update_option('udinra_inimage_admin_flag',$_POST['udinra_inimage_admin_flag']);
 update_option('udinra_intext_admin_flag',$_POST['udinra_intext_admin_flag']);
 update_option('udinra_dyn_admin_flag',$_POST['udinra_dyn_admin_flag']);
 update_option('udinra_mobile_admin_flag',$_POST['udinra_mobile_admin_flag']);
 
+update_option('udinra_inimage_home_flag',$_POST['udinra_inimage_home_flag']);
+update_option('udinra_intext_home_flag',$_POST['udinra_intext_home_flag']);
+update_option('udinra_dyn_home_flag',$_POST['udinra_dyn_home_flag']);
+update_option('udinra_mobile_home_flag',$_POST['udinra_mobile_home_flag']);
+
+update_option('udinra_inimage_page_flag',$_POST['udinra_inimage_page_flag']);
+update_option('udinra_intext_page_flag',$_POST['udinra_intext_page_flag']);
+update_option('udinra_dyn_page_flag',$_POST['udinra_dyn_page_flag']);
+update_option('udinra_mobile_page_flag',$_POST['udinra_mobile_page_flag']);
+
+update_option('udinra_inimage_404_flag',$_POST['udinra_inimage_404_flag']);
+update_option('udinra_intext_404_flag',$_POST['udinra_intext_404_flag']);
+update_option('udinra_dyn_404_flag',$_POST['udinra_dyn_404_flag']);
+update_option('udinra_mobile_404_flag',$_POST['udinra_mobile_404_flag']);
+
+update_option('udinra_inimage_arc_flag',$_POST['udinra_inimage_arc_flag']);
+update_option('udinra_intext_arc_flag',$_POST['udinra_intext_arc_flag']);
+update_option('udinra_dyn_arc_flag',$_POST['udinra_dyn_arc_flag']);
+update_option('udinra_mobile_arc_flag',$_POST['udinra_mobile_arc_flag']);
+
+update_option('udinra_inimage_srch_flag',$_POST['udinra_inimage_srch_flag']);
+update_option('udinra_intext_srch_flag',$_POST['udinra_intext_srch_flag']);
+update_option('udinra_dyn_srch_flag',$_POST['udinra_dyn_srch_flag']);
+update_option('udinra_mobile_srch_flag',$_POST['udinra_mobile_srch_flag']);
+
+update_option('udinra_inimage_auth_flag',$_POST['udinra_inimage_auth_flag']);
+update_option('udinra_intext_auth_flag',$_POST['udinra_intext_auth_flag']);
+update_option('udinra_dyn_auth_flag',$_POST['udinra_dyn_auth_flag']);
+update_option('udinra_mobile_auth_flag',$_POST['udinra_mobile_auth_flag']);
 }
-$wp_udinra_ads_alt_inimage    = get_option('udinra_ads_alt_inimage');
-$wp_udinra_ads_alt_intext     = get_option('udinra_ads_alt_intext');
-$wp_udinra_ads_alt_dynamic    = get_option('udinra_ads_alt_dynamic');
-$wp_udinra_ads_alt_mobile    = get_option('udinra_ads_alt_mobile');
+
+$wp_udinra_ads_alt_inimage1    = get_option('udinra_ads_alt_inimage1');
+$wp_udinra_ads_alt_intext1     = get_option('udinra_ads_alt_intext1');
+$wp_udinra_ads_alt_dynamic1    = get_option('udinra_ads_alt_dynamic1');
+$wp_udinra_ads_alt_mobile1     = get_option('udinra_ads_alt_mobile1');
+$wp_udinra_ads_alt_inimage2    = get_option('udinra_ads_alt_inimage2');
+$wp_udinra_ads_alt_intext2     = get_option('udinra_ads_alt_intext2');
+$wp_udinra_ads_alt_dynamic2    = get_option('udinra_ads_alt_dynamic2');
+$wp_udinra_ads_alt_mobile2     = get_option('udinra_ads_alt_mobile2');
+
 $wp_udinra_intext_admin_flag  = get_option('udinra_intext_admin_flag');
 $wp_udinra_inimage_admin_flag = get_option('udinra_inimage_admin_flag');
 $wp_udinra_dyn_admin_flag     = get_option('udinra_dyn_admin_flag');
 $wp_udinra_mobile_admin_flag     = get_option('udinra_mobile_admin_flag');
+
+$wp_udinra_intext_home_flag  = get_option('udinra_intext_home_flag');
+$wp_udinra_inimage_home_flag = get_option('udinra_inimage_home_flag');
+$wp_udinra_dyn_home_flag     = get_option('udinra_dyn_home_flag');
+$wp_udinra_mobile_home_flag     = get_option('udinra_mobile_home_flag');
+
+$wp_udinra_intext_page_flag  = get_option('udinra_intext_page_flag');
+$wp_udinra_inimage_page_flag = get_option('udinra_inimage_page_flag');
+$wp_udinra_dyn_page_flag     = get_option('udinra_dyn_page_flag');
+$wp_udinra_mobile_page_flag     = get_option('udinra_mobile_page_flag');
+
+$wp_udinra_intext_404_flag  = get_option('udinra_intext_404_flag');
+$wp_udinra_inimage_404_flag = get_option('udinra_inimage_404_flag');
+$wp_udinra_dyn_404_flag     = get_option('udinra_dyn_404_flag');
+$wp_udinra_mobile_404_flag     = get_option('udinra_mobile_404_flag');
+
+$wp_udinra_intext_arc_flag  = get_option('udinra_intext_arc_flag');
+$wp_udinra_inimage_arc_flag = get_option('udinra_inimage_arc_flag');
+$wp_udinra_dyn_arc_flag     = get_option('udinra_dyn_arc_flag');
+$wp_udinra_mobile_arc_flag     = get_option('udinra_mobile_arc_flag');
+
+$wp_udinra_intext_srch_flag  = get_option('udinra_intext_srch_flag');
+$wp_udinra_inimage_srch_flag = get_option('udinra_inimage_srch_flag');
+$wp_udinra_dyn_srch_flag     = get_option('udinra_dyn_srch_flag');
+$wp_udinra_mobile_srch_flag     = get_option('udinra_mobile_srch_flag');
+
+$wp_udinra_intext_auth_flag  = get_option('udinra_intext_auth_flag');
+$wp_udinra_inimage_auth_flag = get_option('udinra_inimage_auth_flag');
+$wp_udinra_dyn_auth_flag     = get_option('udinra_dyn_auth_flag');
+$wp_udinra_mobile_auth_flag     = get_option('udinra_mobile_auth_flag');
+
 ?>
 <div class="wrap">
 <h2>Udinra Adsense Alternatives (Configuration)</h2>
 <form method="post" id="UdinraAA_OPT">
 <fieldset class="options">
-<table><tr><td>Paste code from <b><a href="http://udinra.com/blog/list-of-in-image-advertising-networks" title="Know more about In Image Advertising networks">In Image advertising networks</a></b></td>
-<td><textarea rows="3" columns="300" id="udinra_ads_alt_inimage" name="udinra_ads_alt_inimage" ><?php echo stripslashes($wp_udinra_ads_alt_inimage); ?></textarea></td><td><input type="checkbox" id="udinra_inimage_admin_flag" name="udinra_inimage_admin_flag" value="udinra_inimage_admin_flag" <?php if($wp_udinra_inimage_admin_flag == true) { echo('checked="checked"'); } ?> />Disable Logged in Users</td></tr>
-<tr><td>Paste code from <b><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="Know more about In Text Advertising networks">In Text advertising networks</b></a></td>
-<td><textarea id="udinra_ads_alt_intext" name="udinra_ads_alt_intext" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_intext); ?></textarea></td><td><input type="checkbox" id="udinra_intext_admin_flag" name="udinra_intext_admin_flag" value="udinra_intext_admin_flag" <?php if($wp_udinra_intext_admin_flag == true) { echo('checked="checked"'); } ?> />Disable Logged in Users</td></tr>
-<tr><td>Paste code from <b><a href="https://pub.dynamicoxygen.com/signup.jsp?ref=6117" title="Signup for Dynamic Oxygen">Dynamic Oxygen</a></b></td>
-<td><textarea id="udinra_ads_alt_dynamic" name="udinra_ads_alt_dynamic" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_dynamic); ?></textarea></td><td><input type="checkbox" id="udinra_dyn_admin_flag" name="udinra_dyn_admin_flag" value="udinra_dyn_admin_flag" <?php if($wp_udinra_dyn_admin_flag == true) { echo('checked="checked"'); } ?> />Disable Logged in Users</td></tr>
-<tr><td>Paste code from <b><a href="http://udinra.com/blog/mobile-advertising-network-list" title="Know more about Mobile Advertising networks">Mobile advertising networks</a></b></td>
-<td><textarea id="udinra_ads_alt_mobile" name="udinra_ads_alt_mobile" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_mobile); ?></textarea></td><td><input type="checkbox" id="udinra_mobile_admin_flag" name="udinra_mobile_admin_flag" value="udinra_mobile_admin_flag" <?php if($wp_udinra_mobile_admin_flag == true) { echo('checked="checked"'); } ?> />Disable Logged in Users</td></tr>
-<tr><td><em>If you have a minute, please <a href="http://wordpress.org/extend/plugins/udinra-adsense-alternatives/" target="_blank">rate this plugin</a> on WordPress.org... thanks!</em></td></tr>
+<table width="100%">
+	<thead><tr>
+		<th width="20%">Advertising Network Type</th>
+		<th width="20%">Paste Code 1</th>
+		<th width="20%">Paste Code 2</th>
+		<th width="40%">Check to disable</th>
+	</tr></thead>
+	<tbody><tr>
+		<td width="20%"><a href="http://udinra.com/blog/list-of-in-image-advertising-networks" title="Know more about In Image Advertising networks">In Image advertising networks</a></td>
+		<td width="20%"><textarea rows="3" columns="300" id="udinra_ads_alt_inimage1" name="udinra_ads_alt_inimage1" ><?php echo stripslashes($wp_udinra_ads_alt_inimage1); ?></textarea></td>
+		<td width="20%"><textarea rows="3" columns="300" id="udinra_ads_alt_inimage2" name="udinra_ads_alt_inimage2" ><?php echo stripslashes($wp_udinra_ads_alt_inimage2); ?></textarea></td>
+		<td width="40%">
+			<table><tr>
+				<td><input type="checkbox" id="udinra_inimage_admin_flag" name="udinra_inimage_admin_flag" value="udinra_inimage_admin_flag" <?php if($wp_udinra_inimage_admin_flag == true) { echo('checked="checked"'); } ?> />Logged Users</td>
+				<td><input type="checkbox" id="udinra_inimage_home_flag" name="udinra_inimage_home_flag" value="udinra_inimage_home_flag" <?php if($wp_udinra_inimage_home_flag == true) { echo('checked="checked"'); } ?> />Home Page</td>
+				<td><input type="checkbox" id="udinra_inimage_page_flag" name="udinra_inimage_page_flag" value="udinra_inimage_page_flag" <?php if($wp_udinra_inimage_page_flag == true) { echo('checked="checked"'); } ?> />All Pages</td>
+				<td><input type="checkbox" id="udinra_inimage_404_flag" name="udinra_inimage_404_flag" value="udinra_inimage_404_flag" <?php if($wp_udinra_inimage_404_flag == true) { echo('checked="checked"'); } ?> />404 Pages</td>
+				<td><input type="checkbox" id="udinra_inimage_arc_flag" name="udinra_inimage_arc_flag" value="udinra_inimage_arc_flag" <?php if($wp_udinra_inimage_arc_flag == true) { echo('checked="checked"'); } ?> />Archives Pages</td>
+				<td><input type="checkbox" id="udinra_inimage_srch_flag" name="udinra_inimage_srch_flag" value="udinra_inimage_srch_flag" <?php if($wp_udinra_inimage_srch_flag == true) { echo('checked="checked"'); } ?> />Search Pages</td>
+				<td><input type="checkbox" id="udinra_inimage_auth_flag" name="udinra_inimage_auth_flag" value="udinra_inimage_auth_flag" <?php if($wp_udinra_inimage_auth_flag == true) { echo('checked="checked"'); } ?> />Author Pages</td>
+			</tr></table></td>
+	</tr><tr>
+		<td width="20%"><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="Know more about In Text Advertising networks">In Text advertising networks</a></td>
+		<td width="20%"><textarea id="udinra_ads_alt_intext1" name="udinra_ads_alt_intext1" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_intext1); ?></textarea></td>
+		<td width="20%"><textarea id="udinra_ads_alt_intext2" name="udinra_ads_alt_intext2" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_intext2); ?></textarea></td>
+		<td width="40%">
+			<table><tr>
+				<td><input type="checkbox" id="udinra_intext_admin_flag" name="udinra_intext_admin_flag" 
+value="udinra_intext_admin_flag" <?php if($wp_udinra_intext_admin_flag == true) { echo('checked="checked"'); } ?> />Logged Users</td>
+				<td><input type="checkbox" id="udinra_intext_home_flag" name="udinra_intext_home_flag" value="udinra_intext_home_flag" <?php if($wp_udinra_intext_home_flag == true) { echo('checked="checked"'); } ?> />Home page</td>
+				<td><input type="checkbox" id="udinra_intext_page_flag" name="udinra_intext_page_flag" value="udinra_intext_page_flag" <?php if($wp_udinra_intext_page_flag == true) { echo('checked="checked"'); } ?> />All Pages</td>
+				<td><input type="checkbox" id="udinra_intext_404_flag" name="udinra_intext_404_flag" value="udinra_intext_404_flag" <?php if($wp_udinra_intext_404_flag == true) { echo('checked="checked"'); } ?> />404 Pages</td>
+				<td><input type="checkbox" id="udinra_intext_arc_flag" name="udinra_intext_arc_flag" value="udinra_intext_arc_flag" <?php if($wp_udinra_intext_arc_flag == true) { echo('checked="checked"'); } ?> />Archives Pages</td>
+				<td><input type="checkbox" id="udinra_intext_srch_flag" name="udinra_intext_srch_flag" value="udinra_intext_srch_flag" <?php if($wp_udinra_intext_srch_flag == true) { echo('checked="checked"'); } ?> />Search Pages</td>
+				<td><input type="checkbox" id="udinra_intext_auth_flag" name="udinra_intext_auth_flag" value="udinra_intext_auth_flag" <?php if($wp_udinra_intext_auth_flag == true) { echo('checked="checked"'); } ?> />Author Pages</td>
+			</tr></table></td>
+	</tr><tr>
+	<td width="20%"><a href="http://udinra.com/blog/should-i-use-dynamic-oxygen-ads" title="Should I use Dynamic Oxygen">Dynamic Oxygen</a><br />
+				<a href="http://udinra.com/blog/is-adbull-scam" title="Should I use Adbull">Adbull</a></td>
+		<td width="20%"><textarea id="udinra_ads_alt_dynamic1" name="udinra_ads_alt_dynamic1" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_dynamic1); ?></textarea></td>
+		<td width="20%"><textarea id="udinra_ads_alt_dynamic2" name="udinra_ads_alt_dynamic2" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_dynamic2); ?></textarea></td>
+		<td width="40%">
+			<table><tr>
+				<td><input type="checkbox" id="udinra_dyn_admin_flag" name="udinra_dyn_admin_flag" 
+value="udinra_dyn_admin_flag" <?php if($wp_udinra_dyn_admin_flag == true) { echo('checked="checked"'); } ?> />Logged Users</td>
+				<td><input type="checkbox" id="udinra_dyn_home_flag" name="udinra_dyn_home_flag" value="udinra_dyn_home_flag" <?php if($wp_udinra_dyn_home_flag == true) { echo('checked="checked"'); } ?> />Home Page</td>
+				<td><input type="checkbox" id="udinra_dyn_page_flag" name="udinra_dyn_page_flag" value="udinra_dyn_page_flag" <?php if($wp_udinra_dyn_page_flag == true) { echo('checked="checked"'); } ?> />All Pages</td>
+				<td><input type="checkbox" id="udinra_dyn_404_flag" name="udinra_dyn_404_flag" value="udinra_dyn_404_flag" <?php if($wp_udinra_dyn_404_flag == true) { echo('checked="checked"'); } ?> />404 Pages</td>
+				<td><input type="checkbox" id="udinra_dyn_arc_flag" name="udinra_dyn_arc_flag" value="udinra_dyn_arc_flag" <?php if($wp_udinra_dyn_arc_flag == true) { echo('checked="checked"'); } ?> />Archive Pages</td>
+				<td><input type="checkbox" id="udinra_dyn_srch_flag" name="udinra_dyn_srch_flag" value="udinra_dyn_srch_flag" <?php if($wp_udinra_dyn_srch_flag == true) { echo('checked="checked"'); } ?> />Search Pages</td>
+				<td><input type="checkbox" id="udinra_dyn_auth_flag" name="udinra_dyn_auth_flag" value="udinra_dyn_auth_flag" <?php if($wp_udinra_dyn_auth_flag == true) { echo('checked="checked"'); } ?> />Author Pages</td>
+			</tr></table></td>
+	</tr><tr>
+	</tr><tr>
+		<td width="20%"><a href="http://udinra.com/blog/mobile-advertising-network-list" title="Know more about Mobile Advertising networks">Mobile advertising networks</a></td>
+		<td width="20%"><textarea id="udinra_ads_alt_mobile1" name="udinra_ads_alt_mobile1" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_mobile1); ?></textarea></td>
+		<td width="20%"><textarea id="udinra_ads_alt_mobile2" name="udinra_ads_alt_mobile2" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_mobile2); ?></textarea></td>
+		<td width="40%">
+			<table><tr>
+				<td><input type="checkbox" id="udinra_mobile_admin_flag" name="udinra_mobile_admin_flag" 
+value="udinra_mobile_admin_flag" <?php if($wp_udinra_mobile_admin_flag == true) { echo('checked="checked"'); } ?> />Logged Users</td>
+				<td><input type="checkbox" id="udinra_mobile_home_flag" name="udinra_mobile_home_flag" value="udinra_mobile_home_flag" <?php if($wp_udinra_mobile_home_flag == true) { echo('checked="checked"'); } ?> />Home Page</td>
+				<td><input type="checkbox" id="udinra_mobile_page_flag" name="udinra_mobile_page_flag" value="udinra_mobile_page_flag" <?php if($wp_udinra_mobile_page_flag == true) { echo('checked="checked"'); } ?> />All Pages</td>
+				<td><input type="checkbox" id="udinra_mobile_404_flag" name="udinra_mobile_404_flag" value="udinra_mobile_404_flag" <?php if($wp_udinra_mobile_404_flag == true) { echo('checked="checked"'); } ?> />404 Pages</td>
+				<td><input type="checkbox" id="udinra_mobile_arc_flag" name="udinra_mobile_arc_flag" value="udinra_mobile_arc_flag" <?php if($wp_udinra_mobile_arc_flag == true) { echo('checked="checked"'); } ?> />Archive Pages</td>
+				<td><input type="checkbox" id="udinra_mobile_srch_flag" name="udinra_mobile_srch_flag" value="udinra_mobile_srch_flag" <?php if($wp_udinra_mobile_srch_flag == true) { echo('checked="checked"'); } ?> />Search Pages</td>
+				<td><input type="checkbox" id="udinra_mobile_auth_flag" name="udinra_mobile_auth_flag" value="udinra_mobile_auth_flag" <?php if($wp_udinra_mobile_auth_flag == true) { echo('checked="checked"'); } ?> />Author Pages</td>
+			</tr></table></td>
+	</tr>
 <tr><td><input type="submit" name="udinra_ads_alt_update" value="Update" /></td></tr></table>
 </fieldset>
 </form>
-<br>
-<h3>Join Me on</h3>
-<p>
-<a 
-href="https://plus.google.com/116123732887797372587?rel=author"  title="Esha on Google plus"><b>Google Plus</b></a><br />
-<a 
-href="http://www.facebook.com/eshaaupadhyay"  title="Esha on Facebook"><b>Facebook</b></a><br />
-<a 
-href="https://twitter.com/Udinra"  title="Esha on Twitter"><b>Twitter</b></a><br />
-<a 
-href="https://digg.com/udinra"  title="Esha on Digg"><b>Digg</b></a>
-<br  />
-<a 
-href="https://stumbleupon.com/stumbler/udinra"  title="Esha on StumbleUpon"><b>StumbleUpon</b></a>
-</p>
-<p>Is the plugin helping you then Donate a small share.</p>
-<p>
+<p><em>If you have a minute, please <a href="http://wordpress.org/extend/plugins/udinra-adsense-alternatives/" target="_blank">rate this plugin</a> on WordPress.org... thanks!</p>
+<table><tr>
+<td>
+<!-- Place this tag where you want the badge to render. -->
+<div class="g-plus" data-height="69" data-href="//plus.google.com/116123732887797372587?rel=author"></div>
+
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</td><td><table><tr><td>
+<a href="https://twitter.com/Udinra" class="twitter-follow-button" data-show-count="false">Follow @Udinra</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</td></tr>
+<tr><td>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">  
  <input type="hidden" name="business" value="pitaji@udinra.com">  
  <input type="hidden" name="cmd" value="_donations">  
@@ -101,64 +328,129 @@ href="https://stumbleupon.com/stumbler/udinra"  title="Esha on StumbleUpon"><b>S
         alt="PayPal - The safer, easier way to pay online">  
  <img alt="" border="0" width="1" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" >  
 </form>
-</p>
-<p>Recent Tweets</p>
-<p>
-<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'profile',
-  rpp: 5,
-  interval: 30000,
-  width: 250,
-  height: 300,
-  theme: {
-    shell: {
-      background: '#333333',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#000000',
-      color: '#ffffff',
-      links: '#4aed05'
-    }
-  },
-  features: {
-    scrollbar: true,
-    loop: false,
-    live: true,
-    behavior: 'all'
-  }
-}).render().setUser('Udinra').start();
+</td></tr></table></td>
+</tr></table>
+<table><tr>
+<td>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=238475612916304";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-recommendations" data-site="udinra.com" data-width="300" data-height="300" data-header="true"></div>
+</td>
+<td>
+<div id="digg-widget-1341156508647">
+<a href="http://digg.com/search?q=site:udinra.com">See more udinra.com stories on Digg.com</a>
+</div>
+<script type="text/javascript">
+(function() { var s, s1, diggWidget = {id: "digg-widget-1341156508647", layout: 1, colors: {hdrBg: "#1b5790", hdrTxt: "#b3daff", tabBg: "#4684be", tabTxt: "#b3daff", tabOnTxt: "#d41717", bdyBg: "#fff", stryBrdr: "#ddd", lnk: "#105cb6", descTxt: "#999999", subHd: "#999999"}, title: "udinra.com on Digg", width: 300, requests: [{t: "udinra.com", p: {count: "5", sort: "digg_count-desc", method: "story.getPopular", domain: "udinra.com", min_promote: "30"}}], hide: {}}; if (window.DiggWidget) { if (typeof DiggWidget == 'function') { new DiggWidget(diggWidget); } else { DiggWidget.push(diggWidget); } } else { DiggWidget = [diggWidget]; s = document.createElement('SCRIPT'); s.type = 'text/javascript'; s.async = true; s.src = 'http://widgets.digg.com/widgets.js'; s1 = document.getElementsByTagName('SCRIPT')[0]; s1.parentNode.insertBefore(s, s1); } })();
 </script>
-</p>
+</td>
+<td>
+<div class="fb-like-box" data-href="http://www.facebook.com/udinra" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
+</td>
+</tr></table>
 </div>
 <?php
 }
-
 function udinra_ads_alt_footer() {
-$wp_udinra_ads_alt_inimage = get_option('udinra_ads_alt_inimage');
-$wp_udinra_ads_alt_intext  = get_option('udinra_ads_alt_intext');
-$wp_udinra_ads_alt_dynamic = get_option('udinra_ads_alt_dynamic');
-$wp_udinra_ads_alt_mobile  = get_option('udinra_ads_alt_mobile');
-$wp_udinra_intext_admin_flag     = get_option('udinra_intext_admin_flag');
-$wp_udinra_inimage_admin_flag    = get_option('udinra_inimage_admin_flag');
-$wp_udinra_dyn_admin_flag        = get_option('udinra_dyn_admin_flag');
+$wp_udinra_ads_alt_inimage1    = get_option('udinra_ads_alt_inimage1');
+$wp_udinra_ads_alt_intext1     = get_option('udinra_ads_alt_intext1');
+$wp_udinra_ads_alt_dynamic1    = get_option('udinra_ads_alt_dynamic1');
+$wp_udinra_ads_alt_mobile1     = get_option('udinra_ads_alt_mobile1');
+$wp_udinra_ads_alt_inimage2    = get_option('udinra_ads_alt_inimage2');
+$wp_udinra_ads_alt_intext2     = get_option('udinra_ads_alt_intext2');
+$wp_udinra_ads_alt_dynamic2    = get_option('udinra_ads_alt_dynamic2');
+$wp_udinra_ads_alt_mobile2     = get_option('udinra_ads_alt_mobile2');
+
+$wp_udinra_intext_admin_flag  = get_option('udinra_intext_admin_flag');
+$wp_udinra_inimage_admin_flag = get_option('udinra_inimage_admin_flag');
+$wp_udinra_dyn_admin_flag     = get_option('udinra_dyn_admin_flag');
 $wp_udinra_mobile_admin_flag     = get_option('udinra_mobile_admin_flag');
 
-if(!empty($wp_udinra_ads_alt_mobile) && trim($wp_udinra_ads_alt_mobile) !== '') {
+$wp_udinra_intext_home_flag  = get_option('udinra_intext_home_flag');
+$wp_udinra_inimage_home_flag = get_option('udinra_inimage_home_flag');
+$wp_udinra_dyn_home_flag     = get_option('udinra_dyn_home_flag');
+$wp_udinra_mobile_home_flag     = get_option('udinra_mobile_home_flag');
+
+$wp_udinra_intext_page_flag  = get_option('udinra_intext_page_flag');
+$wp_udinra_inimage_page_flag = get_option('udinra_inimage_page_flag');
+$wp_udinra_dyn_page_flag     = get_option('udinra_dyn_page_flag');
+$wp_udinra_mobile_page_flag  = get_option('udinra_mobile_page_flag');
+
+$wp_udinra_intext_404_flag  = get_option('udinra_intext_404_flag');
+$wp_udinra_inimage_404_flag = get_option('udinra_inimage_404_flag');
+$wp_udinra_dyn_404_flag     = get_option('udinra_dyn_404_flag');
+$wp_udinra_mobile_404_flag     = get_option('udinra_mobile_404_flag');
+
+$wp_udinra_intext_arc_flag  = get_option('udinra_intext_arc_flag');
+$wp_udinra_inimage_arc_flag = get_option('udinra_inimage_arc_flag');
+$wp_udinra_dyn_arc_flag     = get_option('udinra_dyn_arc_flag');
+$wp_udinra_mobile_arc_flag     = get_option('udinra_mobile_arc_flag');
+
+$wp_udinra_intext_srch_flag  = get_option('udinra_intext_srch_flag');
+$wp_udinra_inimage_srch_flag = get_option('udinra_inimage_srch_flag');
+$wp_udinra_dyn_srch_flag     = get_option('udinra_dyn_srch_flag');
+$wp_udinra_mobile_srch_flag     = get_option('udinra_mobile_srch_flag');
+
+$wp_udinra_intext_auth_flag  = get_option('udinra_intext_auth_flag');
+$wp_udinra_inimage_auth_flag = get_option('udinra_inimage_auth_flag');
+$wp_udinra_dyn_auth_flag     = get_option('udinra_dyn_auth_flag');
+$wp_udinra_mobile_auth_flag     = get_option('udinra_mobile_auth_flag');
+$udinra_random_number = rand(0, 1);
+
+/*-------------------------- check for mobile user agent -------------------- */
+if(!empty($wp_udinra_ads_alt_mobile1) && trim($wp_udinra_ads_alt_mobile1) !== '' && !empty($wp_udinra_ads_alt_mobile2) && trim($wp_udinra_ads_alt_mobile2) !== '') {
 	$wp_udinra_desktop_mobile_agent = udinra_detect_user_agent();
+}
+
+if(empty($wp_udinra_ads_alt_inimage2) && trim($wp_udinra_ads_alt_inimage2) == '') {
+	$wp_udinra_ads_alt_inimage2 = $wp_udinra_ads_alt_inimage1;
+}
+
+if(empty($wp_udinra_ads_alt_intext2) && trim($wp_udinra_ads_alt_intext2) == '') {
+	$wp_udinra_ads_alt_intext2 = $wp_udinra_ads_alt_intext1;
+}
+
+if(empty($wp_udinra_ads_alt_dynamic2) && trim($wp_udinra_ads_alt_dynamic2) == '') {
+	$wp_udinra_ads_alt_dynamic2 = $wp_udinra_ads_alt_dynamic1;
+}
+
+if(empty($wp_udinra_ads_alt_mobile2) && trim($wp_udinra_ads_alt_mobile2) == '') {
+	$wp_udinra_ads_alt_mobile2 = $wp_udinra_ads_alt_mobile1;
 }
 
 if($wp_udinra_desktop_mobile_agent == false) {
 	if($wp_udinra_intext_admin_flag == true) {
 		if ( is_user_logged_in() ) { }
-		else {	
-			echo stripslashes($wp_udinra_ads_alt_intext);
-		}}
+		else {
+			if(($wp_udinra_intext_home_flag == true && is_home()) ||	
+			   ($wp_udinra_intext_page_flag == true && is_page()) ||
+			   ($wp_udinra_intext_404_flag == true && is_404()) ||
+			   ($wp_udinra_intext_arc_flag == true && is_archive()) ||
+			   ($wp_udinra_intext_srch_flag == true && is_search()) ||
+			   ($wp_udinra_intext_auth_flag == true && is_author())) { }
+			else {	
+			if ($udinra_random_number) {
+				echo stripslashes($wp_udinra_ads_alt_intext1); }
+			else {echo stripslashes($wp_udinra_ads_alt_intext2); }
+		}}}
 	else {
-		echo stripslashes($wp_udinra_ads_alt_intext);
+		if(($wp_udinra_intext_home_flag == true && is_home()) ||	
+		   ($wp_udinra_intext_page_flag == true && is_page()) ||
+		   ($wp_udinra_intext_404_flag == true && is_404()) ||
+		   ($wp_udinra_intext_arc_flag == true && is_archive()) ||
+		   ($wp_udinra_intext_srch_flag == true && is_search()) ||
+		   ($wp_udinra_intext_auth_flag == true && is_author())) { }
+		else {	
+			if ($udinra_random_number) {
+				echo stripslashes($wp_udinra_ads_alt_intext1); }
+			else {echo stripslashes($wp_udinra_ads_alt_intext2); }
+		 }
 	}
 }
 
@@ -166,10 +458,29 @@ if($wp_udinra_desktop_mobile_agent == false) {
 	if($wp_udinra_inimage_admin_flag == true) {
 		if ( is_user_logged_in() ) { }
 		else {	
-			echo stripslashes($wp_udinra_ads_alt_inimage);
-		}}
+			if(($wp_udinra_inimage_home_flag == true && is_home()) ||	
+			   ($wp_udinra_inimage_page_flag == true && is_page()) ||
+			   ($wp_udinra_inimage_404_flag == true && is_404()) ||
+			   ($wp_udinra_inimage_arc_flag == true && is_archive()) ||
+			   ($wp_udinra_inimage_srch_flag == true && is_search()) ||
+			   ($wp_udinra_inimage_auth_flag == true && is_author())) { }
+			else {	
+				if ($udinra_random_number) {
+					echo stripslashes($wp_udinra_ads_alt_inimage1); }
+				else {echo stripslashes($wp_udinra_ads_alt_inimage2); }
+		}}}
 	else {
-		echo stripslashes($wp_udinra_ads_alt_inimage);
+		if(($wp_udinra_inimage_home_flag == true && is_home()) ||	
+		   ($wp_udinra_inimage_page_flag == true && is_page()) ||
+		   ($wp_udinra_inimage_404_flag == true && is_404()) ||
+		   ($wp_udinra_inimage_arc_flag == true && is_archive()) ||
+		   ($wp_udinra_inimage_srch_flag == true && is_search()) ||
+		   ($wp_udinra_inimage_auth_flag == true && is_author())) { }
+		else {	
+			if ($udinra_random_number) {
+					echo stripslashes($wp_udinra_ads_alt_inimage1); }
+				else {echo stripslashes($wp_udinra_ads_alt_inimage2); }
+		}
 	}
 }
 
@@ -177,10 +488,29 @@ if($wp_udinra_desktop_mobile_agent == false) {
 	if($wp_udinra_dyn_admin_flag == true) {
 		if ( is_user_logged_in() ) { }
 		else {	
-			echo stripslashes($wp_udinra_ads_alt_dynamic);
-		}}
+			if(($wp_udinra_dyn_home_flag == true && is_home()) ||	
+			   ($wp_udinra_dyn_page_flag == true && is_page()) ||
+			   ($wp_udinra_dyn_404_flag == true && is_404()) ||
+			   ($wp_udinra_dyn_arc_flag == true && is_archive()) ||
+			   ($wp_udinra_dyn_srch_flag == true && is_search()) ||
+			   ($wp_udinra_dyn_auth_flag == true && is_author())) { }
+			else {	
+				if ($udinra_random_number) {
+					echo stripslashes($wp_udinra_ads_alt_dynamic1); }
+				else {echo stripslashes($wp_udinra_ads_alt_dynamic2); }
+		}}}
 	else {
-		echo stripslashes($wp_udinra_ads_alt_dynamic);
+		if(($wp_udinra_dyn_home_flag == true && is_home()) ||	
+			   ($wp_udinra_dyn_page_flag == true && is_page()) ||
+			   ($wp_udinra_dyn_404_flag == true && is_404()) ||
+			   ($wp_udinra_dyn_arc_flag == true && is_archive()) ||
+			   ($wp_udinra_dyn_srch_flag == true && is_search()) ||
+			   ($wp_udinra_dyn_auth_flag == true && is_author())) { }
+			else {	
+				if ($udinra_random_number) {
+					echo stripslashes($wp_udinra_ads_alt_dynamic1); }
+				else {echo stripslashes($wp_udinra_ads_alt_dynamic2); }
+		}
 	}
 }
 
@@ -188,12 +518,32 @@ if($wp_udinra_desktop_mobile_agent == true) {
 	if($wp_udinra_mobile_admin_flag == true) {
 		if ( is_user_logged_in() ) { }
 		else {	
-			echo stripslashes($wp_udinra_ads_alt_mobile);
-		}}
+			if(($wp_udinra_mobile_home_flag == true && is_home()) ||	
+			   ($wp_udinra_mobile_page_flag == true && is_page()) ||
+			   ($wp_udinra_mobile_404_flag == true && is_404()) ||
+			   ($wp_udinra_mobile_arc_flag == true && is_archive()) ||
+			   ($wp_udinra_mobile_srch_flag == true && is_search()) ||
+			   ($wp_udinra_mobile_auth_flag == true && is_author())) { }
+			else {	
+				if ($udinra_random_number) {
+					echo stripslashes($wp_udinra_ads_alt_mobile1); }
+				else {echo stripslashes($wp_udinra_ads_alt_mobile2); }
+		}}}
 	else {
-		echo stripslashes($wp_udinra_ads_alt_mobile);
+			if(($wp_udinra_mobile_home_flag == true && is_home()) ||	
+			   ($wp_udinra_mobile_page_flag == true && is_page()) ||
+			   ($wp_udinra_mobile_404_flag == true && is_404()) ||
+			   ($wp_udinra_mobile_arc_flag == true && is_archive()) ||
+			   ($wp_udinra_mobile_srch_flag == true && is_search()) ||
+			   ($wp_udinra_mobile_auth_flag == true && is_author())) { }
+			else {	
+				if ($udinra_random_number) {
+					echo stripslashes($wp_udinra_ads_alt_mobile1); }
+				else {echo stripslashes($wp_udinra_ads_alt_mobile2); }
+			 }
+		}
 	}
-}
+
 }
 
 function udinra_detect_user_agent() {
