@@ -2,9 +2,9 @@
 Contributors: Udinra
 Donate link: http://udinra.com/
 Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,gumgum,kontera,infolinks,luminate,dynamic oxygen,mobile advertising networks,inmobi,admob,adbull
-Requires at least: 2
-Tested up to: 3.4.1
-Stable tag: 1.3
+Requires at least: 2.1
+Tested up to: 3.5.1
+Stable tag: 1.4
 License:GPLv2 or later
 
 Plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and other javascript advertising network.
@@ -17,30 +17,8 @@ Udinra Adsense Alternatives is a plugin for WordPress websites that allows webma
 <li><a href="http://udinra.com/blog/list-of-in-image-advertising-networks" title="List of In Image Advertising networks">In Image Advertising networks</a></li>
 <li><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="List of In Text Advertising networks">In Text Advertising networks</a></li>
 <li><a href="http://udinra.com/blog/mobile-advertising-network-list" title="List of Mobile Advertising networks">Mobile Advertising networks</a></li>
-<li><a href="http://udinra.com/blog/should-i-use-dynamic-oxygen-ads" title="Know about Dynamic Oxygen">Dynamic Oxygen</a></li>
-<li><a href="http://udinra.com/blog/is-adbull-scam" title="Know about Adbull">Adbull</a></li>
 <li>Many other advertising networks with Javascript based ad codes</li>
 </ul>
-
-= New Feature 1.3=
-
-* Support for two advertising networks of each type with rotation.
-* Enable or disable ad networks on different pages.
-
-= New Feature 1.2=
-
-* Support for Mobile Advertising networks.
-* Enable or disable other ad networks if website is accessed by mobile devices and no mobile advertising network present
-
-= New Feature 1.1=
-
-* Enable or disable ads for logged in users
-
-= Features =
-* Simple Copy and Paste required
-* Can you all four types of advertising network on same website together
-* Simple and fast plugin
-* All features configurable via WordPress admin
 
 For details visit http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
@@ -60,6 +38,11 @@ http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
 
 == Changelog ==
+
+= 1.4 =
+
+Code cleanup
+Admin page changes
 
 = 1.3 =
 

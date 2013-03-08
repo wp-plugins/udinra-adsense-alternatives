@@ -3,7 +3,7 @@
 Plugin Name: Udinra-Adsense-Alternatives
 Plugin URI: http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 Description: Simple plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and Dynamic Oxygen,Adbull advertising network.
-Version: 1.3
+Version: 1.4
 Author: Udinra
 Author URI: http://udinra.com
 */
@@ -299,24 +299,7 @@ value="udinra_mobile_admin_flag" <?php if($wp_udinra_mobile_admin_flag == true) 
 </fieldset>
 </form>
 <p><em>If you have a minute, please <a href="http://wordpress.org/extend/plugins/udinra-adsense-alternatives/" target="_blank">rate this plugin</a> on WordPress.org... thanks!</p>
-<table><tr>
-<td>
-<!-- Place this tag where you want the badge to render. -->
-<div class="g-plus" data-height="69" data-href="//plus.google.com/116123732887797372587?rel=author"></div>
-
-<!-- Place this tag after the last badge tag. -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-</td><td><table><tr><td>
-<a href="https://twitter.com/Udinra" class="twitter-follow-button" data-show-count="false">Follow @Udinra</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</td></tr>
-<tr><td>
+<table><tr><td>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">  
  <input type="hidden" name="business" value="pitaji@udinra.com">  
  <input type="hidden" name="cmd" value="_donations">  
@@ -328,10 +311,7 @@ value="udinra_mobile_admin_flag" <?php if($wp_udinra_mobile_admin_flag == true) 
         alt="PayPal - The safer, easier way to pay online">  
  <img alt="" border="0" width="1" height="1" src="https://www.paypal.com/en_US/i/scr/pixel.gif" >  
 </form>
-</td></tr></table></td>
-</tr></table>
-<table><tr>
-<td>
+</td><td>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -340,20 +320,11 @@ value="udinra_mobile_admin_flag" <?php if($wp_udinra_mobile_admin_flag == true) 
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=238475612916304";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<div class="fb-recommendations" data-site="udinra.com" data-width="300" data-height="300" data-header="true"></div>
-</td>
-<td>
-<div id="digg-widget-1341156508647">
-<a href="http://digg.com/search?q=site:udinra.com">See more udinra.com stories on Digg.com</a>
-</div>
-<script type="text/javascript">
-(function() { var s, s1, diggWidget = {id: "digg-widget-1341156508647", layout: 1, colors: {hdrBg: "#1b5790", hdrTxt: "#b3daff", tabBg: "#4684be", tabTxt: "#b3daff", tabOnTxt: "#d41717", bdyBg: "#fff", stryBrdr: "#ddd", lnk: "#105cb6", descTxt: "#999999", subHd: "#999999"}, title: "udinra.com on Digg", width: 300, requests: [{t: "udinra.com", p: {count: "5", sort: "digg_count-desc", method: "story.getPopular", domain: "udinra.com", min_promote: "30"}}], hide: {}}; if (window.DiggWidget) { if (typeof DiggWidget == 'function') { new DiggWidget(diggWidget); } else { DiggWidget.push(diggWidget); } } else { DiggWidget = [diggWidget]; s = document.createElement('SCRIPT'); s.type = 'text/javascript'; s.async = true; s.src = 'http://widgets.digg.com/widgets.js'; s1 = document.getElementsByTagName('SCRIPT')[0]; s1.parentNode.insertBefore(s, s1); } })();
-</script>
-</td>
-<td>
-<div class="fb-like-box" data-href="http://www.facebook.com/udinra" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
-</td>
-</tr></table>
+<div class="fb-like-box" data-href="http://www.facebook.com/udinra" data-width="250" data-show-faces="false" data-stream="false" data-header="false"></div>
+</td><td>
+<div class="fb-follow" data-href="https://www.facebook.com/eshaaupadhyay" data-show-faces="false" data-width="250"></div>
+</td></tr>
+</table>
 </div>
 <?php
 }
