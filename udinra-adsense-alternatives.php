@@ -2,8 +2,8 @@
 /*
 Plugin Name: Udinra-Adsense-Alternatives
 Plugin URI: http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
-Description: Simple plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and Dynamic Oxygen,Adbull advertising network.
-Version: 1.4
+Description: Simple plugin for in image advertising networks,In text advertising network and Mobile Advertising networks.
+Version: 1.5
 Author: Udinra
 Author URI: http://udinra.com
 */
@@ -234,7 +234,7 @@ $wp_udinra_mobile_auth_flag     = get_option('udinra_mobile_auth_flag');
 		<th width="40%">Check to disable</th>
 	</tr></thead>
 	<tbody><tr>
-		<td width="20%"><a href="http://udinra.com/blog/list-of-in-image-advertising-networks" title="Know more about In Image Advertising networks">In Image advertising networks</a></td>
+		<td width="20%"><a href="http://udinra.com/blog/in-image-ads-make-money-images" title="Know more about In Image Advertising networks">In Image advertising networks</a></td>
 		<td width="20%"><textarea rows="3" columns="300" id="udinra_ads_alt_inimage1" name="udinra_ads_alt_inimage1" ><?php echo stripslashes($wp_udinra_ads_alt_inimage1); ?></textarea></td>
 		<td width="20%"><textarea rows="3" columns="300" id="udinra_ads_alt_inimage2" name="udinra_ads_alt_inimage2" ><?php echo stripslashes($wp_udinra_ads_alt_inimage2); ?></textarea></td>
 		<td width="40%">
@@ -248,7 +248,7 @@ $wp_udinra_mobile_auth_flag     = get_option('udinra_mobile_auth_flag');
 				<td><input type="checkbox" id="udinra_inimage_auth_flag" name="udinra_inimage_auth_flag" value="udinra_inimage_auth_flag" <?php if($wp_udinra_inimage_auth_flag == true) { echo('checked="checked"'); } ?> />Author Pages</td>
 			</tr></table></td>
 	</tr><tr>
-		<td width="20%"><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="Know more about In Text Advertising networks">In Text advertising networks</a></td>
+		<td width="20%"><a href="http://udinra.com/blog/best-in-text-advertising-network" title="Know more about In Text Advertising networks">In Text advertising networks</a></td>
 		<td width="20%"><textarea id="udinra_ads_alt_intext1" name="udinra_ads_alt_intext1" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_intext1); ?></textarea></td>
 		<td width="20%"><textarea id="udinra_ads_alt_intext2" name="udinra_ads_alt_intext2" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_intext2); ?></textarea></td>
 		<td width="40%">
@@ -263,8 +263,8 @@ value="udinra_intext_admin_flag" <?php if($wp_udinra_intext_admin_flag == true) 
 				<td><input type="checkbox" id="udinra_intext_auth_flag" name="udinra_intext_auth_flag" value="udinra_intext_auth_flag" <?php if($wp_udinra_intext_auth_flag == true) { echo('checked="checked"'); } ?> />Author Pages</td>
 			</tr></table></td>
 	</tr><tr>
-	<td width="20%"><a href="http://udinra.com/blog/should-i-use-dynamic-oxygen-ads" title="Should I use Dynamic Oxygen">Dynamic Oxygen</a><br />
-				<a href="http://udinra.com/blog/is-adbull-scam" title="Should I use Adbull">Adbull</a></td>
+	<td width="20%"><a href="http://udinra.com/blog/viglink-affiliate-advertising-network" title="Viglink">Viglink</a><br />
+				<a href="http://udinra.com/blog/skimlinks-review-affiliate-marketing-tips" title="Skimlinks">Skimlinks</a></td>
 		<td width="20%"><textarea id="udinra_ads_alt_dynamic1" name="udinra_ads_alt_dynamic1" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_dynamic1); ?></textarea></td>
 		<td width="20%"><textarea id="udinra_ads_alt_dynamic2" name="udinra_ads_alt_dynamic2" rows="3" columns="300" ><?php echo stripslashes($wp_udinra_ads_alt_dynamic2); ?></textarea></td>
 		<td width="40%">
@@ -322,7 +322,7 @@ value="udinra_mobile_admin_flag" <?php if($wp_udinra_mobile_admin_flag == true) 
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-like-box" data-href="http://www.facebook.com/udinra" data-width="250" data-show-faces="false" data-stream="false" data-header="false"></div>
 </td><td>
-<div class="fb-follow" data-href="https://www.facebook.com/eshaaupadhyay" data-show-faces="false" data-width="250"></div>
+<a href="https://twitter.com/Udinra" class="twitter-follow-button" data-show-count="true" data-size="large">Follow @Udinra</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </td></tr>
 </table>
 </div>

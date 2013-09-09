@@ -1,28 +1,40 @@
 === Udinra Adsense Alternatives ===
 Contributors: Udinra
 Donate link: http://udinra.com/
-Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,gumgum,kontera,infolinks,luminate,dynamic oxygen,mobile advertising networks,inmobi,admob,adbull
+Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,luminate,gumgum,kontera,infolinks,taggify,skimlinks,viglink.
 Requires at least: 2.1
-Tested up to: 3.5.1
-Stable tag: 1.4
+Tested up to: 3.6
+Stable tag: 1.5
 License:GPLv2 or later
 
-Plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and other javascript advertising network.
+Plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and affiliate advertising networks.
 
 == Description ==
 
 Udinra Adsense Alternatives is a plugin for WordPress websites that allows webmasters to use 
 
 <ul>
-<li><a href="http://udinra.com/blog/list-of-in-image-advertising-networks" title="List of In Image Advertising networks">In Image Advertising networks</a></li>
-<li><a href="http://udinra.com/blog/list-of-in-text-advertising-networks" title="List of In Text Advertising networks">In Text Advertising networks</a></li>
+<li><a href="http://udinra.com/blog/in-image-ads-make-money-images" title="List of In Image Advertising networks">In Image Advertising networks</a></li>
+<li><a href="http://udinra.com/blog/best-in-text-advertising-network" title="List of In Text Advertising networks">In Text Advertising networks</a></li>
 <li><a href="http://udinra.com/blog/mobile-advertising-network-list" title="List of Mobile Advertising networks">Mobile Advertising networks</a></li>
-<li>Many other advertising networks with Javascript based ad codes</li>
+<li>Affiliate Advertising network like <a href="http://udinra.com/blog/viglink-affiliate-advertising-network" title="Viglink" >Viglink</a> and <a href="http://udinra.com/blog/skimlinks-review-affiliate-marketing-tips" title="Skimlinks" >Skimlinks</a>.</li>
 </ul>
+
+You can enable or disable ads on 
+<ul>
+<li>404 pages</li>
+<li>Author Pages</li>
+<li>Logged in Users</li>
+<li>Archive Pages </li>
+<li>Search Pages </li>
+<li>Home Page </li>
+<li>All Pages </li>
+</ul>
+
+You can also test two advertising networks for performance.For example you can paste ad codes from two advertising networks and see how they perform.
 
 For details visit http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
-For support forum of this version visit http://udinra.com/blog/udinra-adsense-alternatives-version-1-3-forum
 
 == Installation ==
 
@@ -38,6 +50,12 @@ http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
 
 == Changelog ==
+
+= 1.5 =
+
+Support for new ad networks
+Plugin code changes
+Admin page changes
 
 = 1.4 =
 
