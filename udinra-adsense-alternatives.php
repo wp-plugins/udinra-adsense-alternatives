@@ -3,9 +3,9 @@
 Plugin Name: Udinra-Adsense-Alternatives
 Plugin URI: http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 Description: Simple plugin for in image advertising networks,In text advertising network and Mobile Advertising networks.
-Version: 1.5
+Version: 1.6
 Author: Udinra
-Author URI: http://udinra.com
+Author URI: https://udinra.com
 */
 
 function UdinraAA_OPT() {
