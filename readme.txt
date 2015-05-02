@@ -1,10 +1,10 @@
 === Udinra Adsense Alternatives ===
 Contributors: Udinra
-Donate link: http://udinra.com/
+Donate link: https://udinra.com/
 Tags: in text advertising network,in image advertising network,adsense alternative,google adsense alternative,luminate,gumgum,kontera,infolinks,taggify,skimlinks,viglink.
 Requires at least: 2.1
-Tested up to: 3.6
-Stable tag: 1.5
+Tested up to: 4.2.1
+Stable tag: 1.6
 License:GPLv2 or later
 
 Plugin for in image advertising networks,In text advertising network,Mobile Advertising networks and affiliate advertising networks.
@@ -50,6 +50,10 @@ http://udinra.com/blog/udinra-adsense-alternatives-plugin-for-wordpress
 
 
 == Changelog ==
+
+= 1.6 =
+
+Compatible with WordPress 4.2.1
 
 = 1.5 =
 
